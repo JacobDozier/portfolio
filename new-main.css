@@ -1,0 +1,171 @@
+/*********** VARS ***********/
+:root {
+  --c-black: #110303;
+  --c-dark-gray: #18181A;
+  --c-gray: #666;
+  --c-lavender: #cc88ff;
+  --c-red: #dd4444;
+  --c-blue: #7788ff;
+  --c-white: #fff;
+}
+/*********** TYPOGRAPHY ***********/
+* {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+  font-weight: 400;
+  margin: 0;
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--c-white);
+  }
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.66rem;
+}
+
+h3 {
+  font-size: 3.33rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 2.5rem;
+}
+
+h6 {
+  font-size: 2rem;
+}
+
+li {
+  font-size: 1.75rem;
+}
+
+a,
+div,
+p {
+  font-family: 'Quicksand', sans-serif;
+  @media (prefers-color-scheme: dark) {
+    color: var(--c-white);
+  }
+}
+
+a {
+  color: var(--c-black);
+  text-decoration: none;
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--c-white);
+  }
+}
+
+/*********** STYLES ***********/
+button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  min-height: 42px;
+  min-width: 42px;
+  padding: 15px;
+}
+
+button.skip-nav {
+  background-color: var(--c-red);
+  color: var(--c-black);
+  font-size: 1.75rem;
+  font-weight: 900;
+  line-height: 1;
+  position: absolute;
+  top: -500px;
+
+  &:focus {
+    margin: 20px;
+    position: relative;
+    top: 0;
+  }
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--c-dark-gray);
+  }
+  margin: 0;
+  scroll-snap-type: y mandatory;
+
+
+  @media (min-width: 768px) {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+}
+
+body.is-mobile {
+}
+
+section#main {
+  scroll-snap-type: y mandatory;
+}
+
+.panel {
+  display: grid;
+  height: calc(100vh - 30px);
+  grid-template-areas: 
+    "l t t t r "
+    "l lct mct rct r"
+    "l lcb mcb rcb r"
+    "l b b b r";
+  max-width: calc(1440px - 30px);
+  margin: 0 auto;
+  padding: 15px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  width: calc(100vw - 30px);
+}
+
+.panel-1 {
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--c-dark-gray);
+  }
+
+  grid-template-columns: 15px 0 1fr 0 15px;
+  grid-template-rows: 1fr max-content max-content 1fr;
+
+  h1 {
+    grid-area: mct;
+    text-align: center;
+  }
+
+  p {
+    grid-area: mcb;
+    text-align: center;
+  }
+}
+
+.panel-2 {
+  background-color: var(--c-red); /* Red background for Panel 2 */
+}
+
+.panel-3 {
+  background-color: var(--c-lavender); /* Green background for Panel 3 */
+}
