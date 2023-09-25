@@ -6,54 +6,85 @@
   <title>Jacob Dozier</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./main.css">
   <script src="./main.js" charset="UTF-8"></script>
+
 </head>
 <body>
-  <button class="skip-nav" href="#main">Skip navigation?</button>
+  <a class="skip-nav" href="#main">Skip navigation?</a>
 
-  <section id="nav-section">
-    <button aria-label="Mobile menu toggle" class="hamburger-menu-button">
-      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-    </button>
-    <button aria-label="Close mobile menu" class="hamburger-menu-close">
-      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-    </button>
-    <nav class="nav-menu closed">
-      <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="recipe-book.html">Recipe Book</a>
-        </li>
-      </ul>
-    </nav>
-  </section>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a class="nav__link" aria-label="Introduction panel" href="#panel-1">
+          <svg class="nav__panel-icon nav__panel-icon--empty" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
+          <svg class="nav__panel-icon nav__panel-icon--full" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+        </a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" aria-label="My work panel" href="#panel-2">
+          <svg class="nav__panel-icon nav__panel-icon--empty" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
+          <svg class="nav__panel-icon nav__panel-icon--full" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+        </a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" aria-label="Contact panel" href="#panel-3">
+          <svg class="nav__panel-icon nav__panel-icon--empty" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
+          <svg class="nav__panel-icon nav__panel-icon--full" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
   <section id="main">
-    <h1>Hello, World!</h1>
-    <div>
-      TODO: Write intro/bio
-      <br/>
-      TODO: Add contact info. Maybe should put in a footer.
+    <div class="panel panel-1" id="panel-1">
+      <img src="./assets/images/memoji.png" alt="Memoji of me waving" class="greetings-photo">
+      <h1>Hello there</h1>
+      <p>
+        My name is Jacob Dozier. I make websites and tinker with tech.
+      </p>
+      <img src="./assets/images/chevron-down-solid.svg" alt="Read more indicator" class="read-more">
     </div>
-    <br/>
-    <div>
-      <img src="./assets/images/memoji.png" alt="Memoji of me waving">
+
+    <div class="panel panel-2" id="panel-2">
+      <h2 class="panel-2-header">Check out my personal projects</h2>
+      <div class="project-previews-container">
+        <div class="project-preview">
+          <div class="project-image">
+            <p>A simple recipe book and shopping list application.</p>
+            <p>Feel free to create a test account. No emails will be sent to the entered email.</p>
+            <p>Must be valid email format (test@test.com) but the email does not need to be real/active.</p>
+            <ul class="project-preview__tech-list">
+              <li>Angular 15 & 16</li>
+              <li>NgRx</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>TypeScript</li>
+              <li>Bootstrap</li>
+            </ul>
+          </div>
+          <div class="project-code">
+            <a href="https://github.com/JacobDozier/complete-guide-to-angular-2-course-project"
+               referrerpolicy="no-referrer"
+               target="_blank"
+               class="project-code-link"
+               aria-label="Github repository for my Angular recipe book project">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-3" id="panel-3">
+      <h1>Welcome to panel 3 👋🏻</h1>
+      <p>
+        Some more filler text `ere.
+      </p>
     </div>
   </section>
 
-  <section id="footer">
-    <div class="contact-info">
-      <ul>
-        <li>
-          <img src="./assets/images/envelope-regular.svg" alt="Envelope icon">
-          <a href="mailto:jacobadozier@gmail.com">jacobadozier@gmail.com</a>
-        </li>
-      </ul>
-    </div>
-  </section>
 </body>
 </html>
