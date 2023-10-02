@@ -1,82 +1,23 @@
+@import url(./typography.css);
+@import url(./recipe-book.css);
+
 /*********** VARS ***********/
 :root {
   --c-black: #110303;
-  --c-dark-gray: #18181A;
+  --c-alt-black: #18181A;
+  --c-dark-gray: #232327;
   --c-gray: #666;
   --c-lavender: #cc88ff;
   --c-red: #dd4444;
   --c-blue: #7788ff;
   --c-white: #fff;
 }
-/*********** TYPOGRAPHY ***********/
-* {
-  font-family: 'Quicksand', sans-serif;
-}
-
-button,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: 400;
-  margin: 0;
-
-  @media (prefers-color-scheme: dark) {
-    color: var(--c-white);
-  }
-}
-
-h1 {
-  font-size: 4rem;
-}
-
-h2 {
-  font-size: 3.66rem;
-}
-
-h3 {
-  font-size: 3.33rem;
-}
-
-h4 {
-  font-size: 3rem;
-}
-
-h5 {
-  font-size: 2.5rem;
-}
-
-h6 {
-  font-size: 2rem;
-}
-
-li {
-  font-size: 1.75rem;
-}
-
-a,
-div,
-p {
-  font-size: 1.5rem;
-
-  @media (prefers-color-scheme: dark) {
-    color: var(--c-white);
-  }
-}
-
-a {
-  color: var(--c-black);
-  text-decoration: none;
-
-  @media (prefers-color-scheme: dark) {
-    color: var(--c-white);
-  }
-}
 
 /*********** STYLES ***********/
+* {
+  box-sizing: border-box;
+}
+
 button {
   border: none;
   border-radius: 10px;
@@ -84,6 +25,19 @@ button {
   min-height: 42px;
   min-width: 42px;
   padding: 15px;
+}
+
+.link--button {
+  background-color: var(--c-red);
+  border-radius: 25px;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 15px;
+  min-height: 45px;
+  min-width: 45px;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
 }
 
 html {
@@ -96,11 +50,11 @@ body {
   scroll-snap-type: y mandatory;
 
   &::before {
-    background-image: url(./assets/images/icons.png);
+    background-image: url(../../assets/images/icons.png);
     background-size: 200%;
     content: '';
     height: 100%;
-    opacity: 0.33;
+    opacity: 0.25;
     width: 100%;
     z-index: -1;
 
@@ -112,10 +66,10 @@ body {
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: var(--c-dark-gray);
+    background-color: var(--c-alt-black);
 
     &::before {
-      background-image: url(./assets/images/icons-white.png);
+      background-image: url(../../assets/images/icons-white.png);
     }
   }
 
@@ -203,7 +157,7 @@ section#main {
 
 .panel {
   display: grid;
-  height: calc(100vh - 30px);
+  height: 100vh;
   grid-template-areas: 
     "l t t t r "
     "l lct mct rct r"
@@ -213,17 +167,17 @@ section#main {
   padding: 15px;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  width: calc(100vw - 30px);
+  width: 100vw;
 
   @media (min-width: 768px) {
-    height: calc(100vh - 60px);
-    padding: 30px;
-    width: calc(100vw - 60px);
+    height: 100vh;
+    padding: 45px;
+    width: 100vw;
   }
 }
 
 .panel-1 {
-  grid-template-columns: 24px 0 1fr 0 0;
+  grid-template-columns: 0 0 1fr 0 0;
   grid-template-rows: 1fr max-content max-content 1fr;
 
   @media (min-width: 768px) {
@@ -251,6 +205,16 @@ section#main {
     grid-area: mcb;
     text-align: center;
   }
+
+  .read-more--label {
+    grid-area: b;
+    margin: auto 0 48px 24px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      margin: auto 0 48px;
+    }
+  }
 }
 
 .panel-2 {
@@ -262,63 +226,18 @@ section#main {
   }
 
   & .panel-2-header {
+    font-size: 3rem;
     grid-area: t / l / t / r;
     text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 3.66rem;
+    }
   }
 }
 
-.project-previews-container {
+.project-preview-container {
   grid-area: mct;
-  margin: 15px 0 0 5px;
-}
-
-.project-preview {
-  width: 75vw;
-  height: 100%;
-
-  & .project-image {
-    background-color: var(--c-blue);
-    border-radius: 25px 25px 0 0;
-    height: calc(50% - 5px);
-    padding: 5px;
-
-    & p {
-      color: var(--c-black);
-      font-size: 1rem;
-    }
-
-    & .project-preview__tech-list {
-      display: flex;
-      flex-wrap: wrap;
-      list-style-position: inside;
-      margin: 0;
-      padding: 0;
-    }
-
-    & .project-preview__tech-list > li {
-      color: var(--c-black);
-      font-size: 1rem;
-      margin-right: 8px;
-    }
-  }
-
-  & .project-code {
-    background: no-repeat url(./assets/images/github-universe.png) center top;
-    background-size: cover;
-    border-radius: 0 0 25px 25px;
-    height: calc(50% - 5px);
-
-    & .project-code-link {
-      bottom: 0;
-      display: inline-block;
-      left: 0;
-      height: 100%;
-      position: relative;
-      right: 0;
-      top: 0;
-      width: 100%;
-    }
-  }
 }
 
 .panel-3 {}
@@ -340,14 +259,14 @@ section#main {
 
 @keyframes bounce {
     25% {
-      padding-bottom: 20px;
+      margin-bottom: 20px;
     }
 
     50% {
-      padding-bottom: 0;
+      margin-bottom: 0;
     }
 
     75% {
-      padding-bottom: 8px;
+      margin-bottom: 8px;
     }
 }
