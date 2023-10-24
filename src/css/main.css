@@ -1,5 +1,4 @@
 @import url(./typography.css);
-@import url(./recipe-book.css);
 
 /*********** VARS ***********/
 :root {
@@ -223,12 +222,12 @@ section#main {
     }
   }
 
-  h1 {
+  & h1 {
     grid-area: mct;
     text-align: center;
   }
 
-  p {
+  & p {
     grid-area: mcb;
     text-align: center;
   }
@@ -275,7 +274,7 @@ section#main {
     grid-template-columns: 0 0 1fr 0 0;
   }
 
-  ul {
+  & ul {
     column-gap: 8px;
     display: flex;
     flex-wrap: wrap;
@@ -284,7 +283,7 @@ section#main {
     padding: 0;
   }
 
-  li {
+  & li {
     font-size: 1.25rem;
   }
 }
