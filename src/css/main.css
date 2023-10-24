@@ -211,6 +211,10 @@ section#main {
 
   }
 
+  @supports (-webkit-touch-callout: none) {
+    padding-bottom: 60px;
+  }
+
   .greetings-photo {
     border-radius: 100%;
     grid-area: t;
