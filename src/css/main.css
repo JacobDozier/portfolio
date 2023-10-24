@@ -212,7 +212,7 @@ section#main {
   }
 
   @supports (-webkit-touch-callout: none) {
-    padding-bottom: 60px;
+    padding-bottom: 90px;
   }
 
   .greetings-photo {
