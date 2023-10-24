@@ -190,6 +190,7 @@ section#main {
     "l lcb mcb rcb r"
     "l b b b r";
   margin: 0 auto;
+  max-width: 1440px;
   padding: 15px;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -263,9 +264,7 @@ section#main {
 }
 
 .project-preview-container {
-  justify-self: center;
   grid-area: mct;
-  max-width: 1440px;
 }
 
 .panel-3 {
