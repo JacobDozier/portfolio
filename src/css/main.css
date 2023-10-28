@@ -248,7 +248,8 @@ section#main {
 }
 
 .panel-2,
-.panel-3 {
+.panel-3,
+.panel-5 {
   grid-template-columns: 24px 0 1fr 0 0;
   grid-template-rows: max-content 1fr 0 0;
 
@@ -264,6 +265,19 @@ section#main {
 
   & .bio-description {
     grid-area: mct;
+  }
+
+  & ul {
+    column-gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+  }
+
+  & li {
+    font-size: 1.25rem;
   }
 }
 
