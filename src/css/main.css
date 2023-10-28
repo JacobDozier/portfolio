@@ -127,7 +127,7 @@ body {
 .nav {
   position: fixed;
   left: 10px;
-  top: 90%;
+  top: 85%;
   transform: translateY(-50%);
 
   @media (min-width: 768px) {
@@ -247,22 +247,23 @@ section#main {
   }
 }
 
-.panel-2 {
+.panel-2,
+.panel-3 {
   grid-template-columns: 24px 0 1fr 0 0;
   grid-template-rows: max-content 1fr 0 0;
 
   @media (min-width: 768px) {
     grid-template-columns: 0 0 1fr 0 0;
   }
+}
 
-  & .panel-2-header {
-    font-size: 3rem;
-    grid-area: t / l / t / r;
-    text-align: center;
+.panel-2 {
+  & .bio-header {
+    grid-area: t;
+  }
 
-    @media (min-width: 768px) {
-      font-size: 3.66rem;
-    }
+  & .bio-description {
+    grid-area: mct;
   }
 }
 
@@ -270,7 +271,7 @@ section#main {
   grid-area: mct;
 }
 
-.panel-3 {
+.panel-4 {
   grid-template-columns: 24px 0 1fr 0 0;
   grid-template-rows: max-content 1fr 0 0;
 
