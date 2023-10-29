@@ -62,7 +62,7 @@
     </div>
 
     <div class="panel panel-2" id="panel-2">
-      <h3 class="bio-header">A Bit About Me</h3>
+      <h4 class="bio-header">A Bit About Me</h4>
       <div class="bio-description">
         <p class="bio-description-statement">
           Software has an ever increasing presence in our daily lives. 
@@ -85,7 +85,7 @@
     <div class="panel panel-3" id="panel-3">
       <div class="project-preview-container">
         <div class="project-preview">
-          <h3 class="project-preview__header">First up, this site 😁</h3>
+          <h4 class="project-preview__header">First up, this site 😁</h4>
           <p class="project-preview__description">
             As this is a brochure site I went for lean and snappy, while being user friendly and responsive.
             <br><br>
@@ -103,7 +103,7 @@
     <div class="panel panel-4" id="panel-4">
       <div class="project-preview-container">
         <div class="project-preview">
-          <h3 class="project-preview__header">Recipe Book 🍽️</h3>
+          <h4 class="project-preview__header">Recipe Book 🍽️</h4>
           <div class="project-preview__description">
             <p>A simple recipe book and shopping list application.</p>
             <p>Feel free to create a test account. No emails will be sent to the entered email.</p>
@@ -133,12 +133,39 @@
     </div>
 
     <div class="panel panel-5" id="panel-5">
-      <h3 class="contact-header">Get In Touch</h3>
-      <div class="contact-email-container">
-        <h6 class="contact-label">email</h6>
-      </div>
-      <div class="contact-linkedin-container">
-        <h6 class="contact-label">LinkedIn</h6>
+      <div class="contact-container">
+        <h4 class="contact-header">Get In Touch</h4>
+        <div class="contact-email-container">
+          <h6 class="contact-label">Email</h6>
+          <form action="mailto:jacobadozier@gmail.com" method="get" enctype="text/plain">
+            <div class="contact__email--subject-container input-container">
+              <p>Subject: </p>
+              <div class="contact__input-wrapper">
+                <input type="text" name="subject" placeholder="Your Name" value="👋🏻">
+              </div>
+            </div>
+            <div class="contact__email--sender-container input-container">
+              <p>Email:</p>
+              <div class="contact__input-wrapper">
+                <input type="email" name="email" placeholder="Your Email">
+              </div>
+            </div>
+            <div class="contact__email--message-container input-container">
+              <p>Message:</p>
+              <div class="contact__input-wrapper">
+                <textarea name="body" rows="5" cols="30" placeholder="Your Message"></textarea><br>
+              </div>
+            </div>
+            <div class="contact__email--message-container input-container">
+              <div class="contact__input-wrapper">
+                <input type="submit" value="Send">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="contact-linkedin-container">
+          <a class="link--button external" href="https://www.linkedin.com/in/jacob-dozier/">LinkedIn</a>
+        </div>
       </div>
     </div>
   </section>
