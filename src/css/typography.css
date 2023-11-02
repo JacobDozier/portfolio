@@ -10,6 +10,7 @@ h3,
 h4,
 h5,
 h6 {
+  color: var(--c-black);
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
   margin: 0;
@@ -47,18 +48,9 @@ li {
   font-size: 1.75rem;
 }
 
-a,
-div,
-p {
-  font-size: 1.5rem;
-
-  @media (prefers-color-scheme: dark) {
-    color: var(--c-white);
-  }
-}
-
 a {
   color: var(--c-black);
+  font-size: 1.5rem;
   text-decoration: none;
 
   @media (prefers-color-scheme: dark) {
@@ -66,35 +58,18 @@ a {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-shadow: -3px 3px 0px var(--c-white),
-                3px -3px 0px var(--c-white),
-                -3px -3px 0px var(--c-white),
-                3px 3px 0px var(--c-white);
-
-  @media (prefers-color-scheme: dark) {
-    text-shadow: -3px 3px 0px var(--c-black),
-                  3px -3px 0px var(--c-black),
-                  -3px -3px 0px var(--c-black),
-                  3px 3px 0px var(--c-black);
-}
-}
-
+button,
+div,
+li,
 p {
-  text-shadow: -1px 1px 0px var(--c-white),
-                1px -1px 0px var(--c-white),
-                -1px -1px 0px var(--c-white),
-                1px 1px 0px var(--c-white);
+  color: var(--c-black);
+  font-size: 1.125rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 
   @media (prefers-color-scheme: dark) {
-    text-shadow: -1px 1px 0px var(--c-black),
-                  1px -1px 0px var(--c-black),
-                  -1px -1px 0px var(--c-black),
-                  1px 1px 0px var(--c-black);
-}
+    color: var(--c-white);
+  }
 }
