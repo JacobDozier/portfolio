@@ -2,15 +2,16 @@
 
 /*********** VARS ***********/
 :root {
-  --c-black: #110303;
   --c-alt-black: #18181A;
-  --c-dark-gray: #232327;
+  --c-black: #000;
+  --c-dark-gray: #242424;
   --c-gray: #666;
+  --c-white: #fff;
+
+  --c-blue: #7788ff;
   --c-lavender: #cc88ff;
   --c-red: #dd4444;
   --c-red-dark: #971b1b;
-  --c-blue: #7788ff;
-  --c-white: #fff;
 }
 
 /*********** STYLES ***********/
