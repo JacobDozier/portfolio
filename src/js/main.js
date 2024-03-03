@@ -6,7 +6,7 @@ function closeNav() {
   body.classList.remove('nav--open');
   navCloseButton.style.display = 'none';
   navEl.classList.add('nav--closed');
-  topRightNavBubbles();
+  // topRightNavBubbles();
   setTimeout(resizeNavBubbles, 1000);
 }
 
@@ -64,7 +64,7 @@ function navCollapsedClickHandler () {
   const navEl = document.querySelector('.nav');
 
   navCover.addEventListener('click', () => {
-    centerNavBubbles();
+    // centerNavBubbles();
 
     body.classList.add('nav--open');
     navEl.classList.remove('nav--closed');
@@ -116,19 +116,17 @@ function resizeNavBubbles() {
   const numNavItems = navItems.length;
   const angleIncrement = (2 * Math.PI) / numNavItems;
 
-  const collapsedNavArea = Math.floor(radius ** 2 * Math.PI);
-  const areaPerItem = collapsedNavArea / numNavItems;
-  let itemDiameter = Math.floor(Math.sqrt(areaPerItem / Math.PI));
+  let itemDiameter = navItems[0].offsetWidth;
 
   navItems.forEach((element, index) => {
     const angle = index * angleIncrement;
     let x = radius / 2 * Math.cos(angle);
     let y = radius / 2 * Math.sin(angle);
 
-    element.firstElementChild.style.height = `${itemDiameter}px`;
-    element.firstElementChild.style.width = `${itemDiameter}px`;
-    element.style.left = `${x + radius}px`;
-    element.style.top = `${y + radius}px`;
+    console.log(`x / radius * 100: ${x / radius * 100}`);
+
+    element.style.left = `${x}px`;
+    element.style.top = `${y}px`;
     navLabels[index].style.marginLeft = `-${itemDiameter * 1.25}px`;
   });
 }

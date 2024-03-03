@@ -216,15 +216,22 @@ body.nav--open .nav-open-background {
   & .nav__panel-label {
     transition: font-size 1s 1s ease-in-out;
   }
+
+  & .nav__link {
+    height: 45px;
+    width: 45px;
+  }
 }
 
 .nav {
   background-color: var(--c-red);
   border-radius: 50%;
-  height: clamp(100px, 85vw, 500px);
+  /* height: clamp(100px, 85vw, 500px); */
+  height: 500px;
   margin: auto;
   transition: all 1s ease-in-out;
-  width: clamp(100px, 85vw, 500px);
+  /* width: clamp(100px, 85vw, 500px); */
+  width: 500px;
   z-index: 9;
 
   top: 0;
@@ -241,16 +248,17 @@ body.nav--open .nav-open-background {
 .nav__list {
   height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 50% 0 0 50%;
   position: relative;
   transform: rotate(-90deg);
+  width: 100%;
 }
 
 .nav__item {
   list-style: none;
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
-  transition: all 1s ease-in-out;
+  transition: top 1s ease-in-out, right 1s ease-in-out, bottom 1s ease-in-out, left 1s ease-in-out;
   width: fit-content;
 
   @media (prefers-color-scheme: dark) {
@@ -270,9 +278,10 @@ body.nav--open .nav-open-background {
 .nav__link {
   align-items: center;
   display: flex;
-  height: 45px;
+  height: 10px;
   justify-content: center;
-  width: 45px;
+  transition: height 1s ease-in-out, width 1s ease-in-out;
+  width: 10px;
 }
 
 .nav__panel-icon {
