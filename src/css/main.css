@@ -218,20 +218,18 @@ body.nav--open .nav-open-background {
   }
 
   & .nav__link {
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
   }
 }
 
 .nav {
   background-color: var(--c-red);
   border-radius: 50%;
-  /* height: clamp(100px, 85vw, 500px); */
-  height: 500px;
+  height: clamp(100px, 85vw, 500px);
   margin: auto;
   transition: all 1s ease-in-out;
-  /* width: clamp(100px, 85vw, 500px); */
-  width: 500px;
+  width: clamp(100px, 85vw, 500px);
   z-index: 9;
 
   top: 0;

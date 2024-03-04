@@ -3,11 +3,11 @@ function closeNav() {
   const navCloseButton = document.querySelector('.nav-close-button');
   const navEl = document.querySelector('.nav');
 
+  centerNavBubbles();
   body.classList.remove('nav--open');
   navCloseButton.style.display = 'none';
   navEl.classList.add('nav--closed');
-  // topRightNavBubbles();
-  setTimeout(resizeNavBubbles, 1000);
+  setTimeout(positionNavBubbles, 1000);
 }
 
 function navBubbleIntersectionHandler() {
@@ -64,12 +64,12 @@ function navCollapsedClickHandler () {
   const navEl = document.querySelector('.nav');
 
   navCover.addEventListener('click', () => {
-    // centerNavBubbles();
+    centerNavBubbles();
 
     body.classList.add('nav--open');
     navEl.classList.remove('nav--closed');
     setTimeout(() => {
-      resizeNavBubbles();
+      positionNavBubbles();
       navCloseButton.style.display = 'block';
       navCloseButton.focus();
       focusNavAfterNavClose();
@@ -96,18 +96,7 @@ function centerNavBubbles() {
   });
 }
 
-function topRightNavBubbles() {
-  const navItems = document.querySelectorAll('.nav__item');
-
-  navItems.forEach((element, index) => {
-    element.style.left = `50%`;
-    element.style.top = `50%`;
-    element.firstElementChild.style.height = `10px`;
-    element.firstElementChild.style.width = `10px`;
-  });
-}
-
-function resizeNavBubbles() {
+function positionNavBubbles() {
   const navEl = document.querySelector('.nav');
   const navItems = document.querySelectorAll('.nav__item');
   const navLabels = document.querySelectorAll('.nav__panel-label');
@@ -123,11 +112,9 @@ function resizeNavBubbles() {
     let x = radius / 2 * Math.cos(angle);
     let y = radius / 2 * Math.sin(angle);
 
-    console.log(`x / radius * 100: ${x / radius * 100}`);
-
-    element.style.left = `${x}px`;
-    element.style.top = `${y}px`;
-    navLabels[index].style.marginLeft = `-${itemDiameter * 1.25}px`;
+    element.style.left = `calc(50% + ${x}px)`;
+    element.style.top = `calc(50% + ${y}px)`;
+    navLabels[index].style.marginLeft = `-${itemDiameter * 1.5}px`;
   });
 }
 
@@ -144,15 +131,16 @@ function focusNavAfterNavClose() {
   });
 }
 
+// TODO: Fix keyboard navigation while nav is closed.
 window.addEventListener('DOMContentLoaded', () => {
   navBubbleIntersectionHandler();
   navCloseBodyHandler();
   navCloseButtonHandler()
   navCollapsedClickHandler();
   navItemClickHandler();
-  resizeNavBubbles();
+  positionNavBubbles();
 });
 
 window.addEventListener('resize', () => {
-  resizeNavBubbles();
+  positionNavBubbles();
 });
