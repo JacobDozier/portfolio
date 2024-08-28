@@ -71,7 +71,16 @@ html {
 }
 
 body {
+  display: grid;
+  grid-template-areas: 
+    "blades-left . blades-right"
+    "blades-left content blades-right"
+    "blades-left . blades-right";
+  grid-template-columns: min-content 1fr min-content;
+  grid-template-rows: 16px 1fr 16px;
+  height: 100vh;
   margin: 0;
+  max-height: 100vh;
   position: relative;
 
   &::before {
@@ -79,7 +88,6 @@ body {
     background: url(../../assets/images/icons.png) repeat;
     background-size: contain;
     content: '';
-    height: 100vh;
     opacity: 0.1;
     width: 100vw;
     z-index: -1;
@@ -104,9 +112,64 @@ body {
     margin: 0 auto;
 
     &::before {
-      background-size: contain;
+      background-size: auto;
     }
   } */
+
+  /* .blades {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    position: fixed;
+  } */
+
+  .blades--left {
+    grid-area: blades-left;
+  }
+
+  .blades--right {
+    grid-area: blades-right;
+  }
+
+  .blade {
+    background-color: var(--c-white);
+    color: var(--c-black);
+    display: inline-block;
+    height: 100vh;
+    position: relative;
+    width: 50px;
+
+    .blade__text {
+      display: inline-block;
+      position: absolute;
+      right: 50%;
+      top: 50%;
+      transform: translateX(50%) rotate(90deg);
+      width: max-content;
+    }
+  }
+
+  .content {
+    display: flex;
+    grid-area: content;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  .radial-border {
+    /* background: linear-gradient(to bottom right,red, orange, yellow, green, blue, indigo, violet); */
+    background: linear-gradient(to bottom right,red, rebeccapurple);
+    border-radius: 25px;
+    height: fit-content;
+    padding: 3px;
+  }
+
+  p {
+    background: var(--c-alt-black);
+    border-radius: 25px;
+    margin: 0;
+    padding: 20px;
+  }
 }
 
 section#main {
