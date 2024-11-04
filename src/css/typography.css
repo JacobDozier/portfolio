@@ -1,6 +1,6 @@
 /*********** TYPOGRAPHY ***********/
 * {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 button,
@@ -11,7 +11,7 @@ h4,
 h5,
 h6 {
   color: var(--c-black);
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   margin: 0;
 
@@ -63,7 +63,9 @@ div,
 li,
 p {
   color: var(--c-black);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.25;
 
   @media (min-width: 768px) {
     font-size: 1.5rem;
@@ -72,4 +74,8 @@ p {
   @media (prefers-color-scheme: dark) {
     color: var(--c-white);
   }
+}
+
+p {
+  margin: 15px 0 0 0;
 }
