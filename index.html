@@ -17,150 +17,66 @@
   <body>
     <a class="skip-nav" href="#main">Skip navigation?</a>
 
-    <nav class="nav nav--closed">
-      <div class="nav__cover" tabindex="0"></div>
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" aria-label="Introduction panel" href="#panel-1">
-            <svg
-              class="nav__panel-icon nav__panel-icon--empty"
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 512 512"
+    <header>
+      <nav class="nav">
+        <button class="nav__mobile-menu-button" aria-label="Open navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
+        </button>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a
+              class="nav__link nav--button nav__link--active"
+              aria-label="Introduction panel"
+              href="#panel-1"
             >
-              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path
-                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
-              />
-            </svg>
-            <svg
-              class="nav__panel-icon nav__panel-icon--full"
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 512 512"
+              <span class="nav__panel-label">Home</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              class="nav__link nav--button"
+              aria-label="Bio panel"
+              href="#panel-2"
             >
-              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
-            </svg>
-            <span class="nav__panel-label">Home</span>
-          </a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" aria-label="Bio panel" href="#panel-2">
-            <svg
-              class="nav__panel-icon nav__panel-icon--empty"
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 512 512"
+              <span class="nav__panel-label">About</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              class="nav__link nav--button"
+              aria-label="Portfolio discussion panel"
+              href="#panel-3"
             >
-              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path
-                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
-              />
-            </svg>
-            <svg
-              class="nav__panel-icon nav__panel-icon--full"
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 512 512"
+              <span class="nav__panel-label">This Site</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              class="nav__link nav--button"
+              aria-label="Recipe book project panel"
+              href="#panel-4"
             >
-              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
-            </svg>
-            <span class="nav__panel-label">About</span>
-          </a>
-        </li>
-        <li class="nav__item">
-          <a
-            class="nav__link"
-            aria-label="Portfolio discussion panel"
-            href="#panel-3"
-          >
-            <svg
-              class="nav__panel-icon nav__panel-icon--empty"
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 512 512"
+              <span class="nav__panel-label">Recipe Book</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              class="nav__link nav--button"
+              aria-label="Contact panel"
+              href="#panel-5"
             >
-              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path
-                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
-              />
-            </svg>
-            <svg
-              class="nav__panel-icon nav__panel-icon--full"
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 512 512"
-            >
-              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
-            </svg>
-            <span class="nav__panel-label">This Site</span>
-          </a>
-        </li>
-        <li class="nav__item">
-          <a
-            class="nav__link"
-            aria-label="Recipe book project panel"
-            href="#panel-4"
-          >
-            <svg
-              class="nav__panel-icon nav__panel-icon--empty"
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 512 512"
-            >
-              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path
-                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
-              />
-            </svg>
-            <svg
-              class="nav__panel-icon nav__panel-icon--full"
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 512 512"
-            >
-              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
-            </svg>
-            <span class="nav__panel-label">Recipe Book</span>
-          </a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" aria-label="Contact panel" href="#panel-5">
-            <svg
-              class="nav__panel-icon nav__panel-icon--empty"
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 512 512"
-            >
-              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path
-                d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
-              />
-            </svg>
-            <svg
-              class="nav__panel-icon nav__panel-icon--full"
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 512 512"
-            >
-              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
-            </svg>
-            <span class="nav__panel-label">Contact</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <div class="nav-open-background"></div>
-    <button
-      class="nav-close-button link--button"
-      aria-label="Close nav"
-      tabindex="0"
-    ></button>
+              <span class="nav__panel-label">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <section id="main">
       <div class="panel panel-1" id="panel-1">
@@ -234,13 +150,14 @@
           <h4 class="project-preview__header">Recipe Book 🍽️</h4>
           <p>A simple recipe book and shopping list application.</p>
           <p>
-            Feel free to create a test account. No emails will be sent to the
-            entered email.
+            This was created during a deep dive into Angular. It is an
+            exploration of many of Angular's features and capabilities.
           </p>
           <p>
-            Must be valid email format (test@test.com) but the email does not
-            need to be real/active.
+            This project is no longer live but is complete and could be deployed
+            anytime.
           </p>
+          <div class="spacer spacer--small"></div>
           <h6>Tech used:</h6>
           <ul class="project-preview__tech-list">
             <li>Angular 15 & 16</li>
@@ -250,13 +167,6 @@
             <li>TypeScript</li>
             <li>Bootstrap</li>
           </ul>
-          <a
-            class="link--button external"
-            href="https://recipe-book.jacobdozier.com"
-            target="_blank"
-            rel="noreferrer"
-            >Visit Site</a
-          >
           <a
             class="link--button external"
             href="https://github.com/JacobDozier/complete-guide-to-angular-2-course-project"
